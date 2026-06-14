@@ -68,7 +68,9 @@ docker compose up --build
 - GitHub Actions workflow for unit tests
 - `.env.example` for safe configuration hygiene
 - Architecture overview in `docs/architecture.md`
+- Evaluation strategy in `docs/evaluation.md`
 - Production readiness notes in `docs/production-readiness.md`
+- Security and privacy guidance in `docs/security-and-privacy.md`
 - Security and governance guidance in `docs/security-and-governance.md`
 - Security, monitoring, cost, and scalability considerations documented
 
