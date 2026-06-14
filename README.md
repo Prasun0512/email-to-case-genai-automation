@@ -34,6 +34,7 @@ flowchart LR
 ```bash
 python -m src.demo
 python -m unittest discover -s tests
+docker compose up --build
 ```
 
 ## Included POC Code
@@ -43,6 +44,14 @@ python -m unittest discover -s tests
 - Idempotency key generation for event-driven retry safety
 - Confidence scoring, validation errors, audit trail, and review routing
 - Sample inbound email in `examples/inbound_email.json`
+
+## Engineering Maturity
+
+- Dockerfile and `docker-compose.yml` for local execution
+- GitHub Actions workflow for unit tests
+- `.env.example` for safe configuration hygiene
+- Production readiness notes in `docs/production-readiness.md`
+- Security, monitoring, cost, and scalability considerations documented
 
 ## Production Extensions
 

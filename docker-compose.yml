@@ -1,0 +1,8 @@
+services:
+  email-to-case:
+    build: .
+    environment:
+      APP_ENV: local
+      LOG_LEVEL: INFO
+      CONFIDENCE_THRESHOLD: "0.80"
+    command: python -m src.demo
