@@ -1,0 +1,7 @@
+{
+  "subject": "Urgent claim document received",
+  "sender": "member@example.com",
+  "message_id": "msg-claim-1001",
+  "body": "Please create a case for claim number CLM-4471. The member is blocked and attached the required document.",
+  "attachments": ["claim-form.pdf", "member-id.png"]
+}

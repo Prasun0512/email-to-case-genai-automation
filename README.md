@@ -36,6 +36,14 @@ python -m src.demo
 python -m unittest discover -s tests
 ```
 
+## Included POC Code
+
+- Email classification and priority detection
+- Deterministic field extraction for requester, reference ID, and artifact hints
+- Idempotency key generation for event-driven retry safety
+- Confidence scoring, validation errors, audit trail, and review routing
+- Sample inbound email in `examples/inbound_email.json`
+
 ## Production Extensions
 
 - Microsoft Graph API email ingestion
