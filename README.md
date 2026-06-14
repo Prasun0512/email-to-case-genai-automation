@@ -78,3 +78,10 @@ docker compose up --build
 - Azure Blob Storage for raw artifacts
 - Azure OpenAI extraction prompts
 - TrackOps or CRM case creation API
+
+## Flagship Deep Dive
+
+See [docs/flagship-architecture.md](docs/flagship-architecture.md) for Azure
+Service Bus flows, OCR pipeline, LLM extraction, case creation, retry design,
+observability, scalability, security, cost analysis, operational runbooks, and
+business-impact framing.
