@@ -14,6 +14,23 @@ to create case records. Manual processing slows response time and introduces
 inconsistent data entry. This project demonstrates an automation design for
 structured case creation with safety controls.
 
+## Architecture Decisions and Tradeoffs
+
+- **Decision:** Use event-driven processing with artifact storage, queue-backed
+  workers, OCR/extraction, validation, and review routing.
+- **Tradeoff:** Queues and idempotency add implementation complexity, but they
+  make retries, DLQ handling, and human-review pauses safer than synchronous processing.
+- **Expected scale:** Designed for bursty inbox workloads where ingestion should
+  continue even when OCR, LLM extraction, or downstream case APIs slow down.
+- **Cost strategy:** Run deterministic classification and validation first, then
+  use LLM extraction only where unstructured context requires it.
+- **Security strategy:** Store raw artifacts securely, redact sensitive values
+  before logs/prompts, and keep source links for audit.
+- **Operational strategy:** Monitor ingestion failures, DLQ depth, extraction
+  confidence, review backlog, and case API latency.
+- **Lessons learned:** Idempotency and field-level confidence are core platform
+  requirements, not implementation details.
+
 ## Architecture
 
 ```mermaid
